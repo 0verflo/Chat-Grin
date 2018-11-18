@@ -85,7 +85,7 @@ namespace UnityStandardAssets._2D {
             // If the player should jump...
             if (m_Grounded && jump && m_Anim.GetBool ("Ground")) {
                 // Play sound on Jump
-                allSounds[1].Play();
+                allSounds[0].Play();
 
                 // Add a vertical force to the player.
                 m_Grounded = false;
@@ -110,7 +110,7 @@ namespace UnityStandardAssets._2D {
         }
 
         private void playSoundStep() {
-            AudioSource.PlayClipAtPoint(allSounds[0].clip, transform.position, 0.55f);
+            AudioSource.PlayClipAtPoint(allSounds[0].clip, transform.position, 0.95f);
         }
 
     }
