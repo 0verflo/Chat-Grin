@@ -513,6 +513,7 @@ GameObject:
   - component: {fileID: 74566882}
   - component: {fileID: 74566881}
   - component: {fileID: 74566880}
+  - component: {fileID: 74566883}
   m_Layer: 0
   m_Name: chat-grin1
   m_TagString: Untagged
@@ -604,6 +605,24 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 54
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &74566883
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 74566879}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: c3522fe0515a5410aaadca9aea02c080, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1001 &77461555
 Prefab:
   m_ObjectHideFlags: 0
@@ -3715,7 +3734,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 7.538822
+  orthographic size: 9.539768
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -3738,7 +3757,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1.2167473, y: 0.83966947, z: -10}
+  m_LocalPosition: {x: -1.14, y: 2.31, z: -10}
   m_LocalScale: {x: 1.0395634, y: 1.0170877, z: 1}
   m_Children:
   - {fileID: 405012007}
@@ -8132,8 +8151,8 @@ CapsuleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -13.977566, y: 0.000000028857947}
-  m_Size: {x: 107.54511, y: 135.49998}
+  m_Offset: {x: -9.851678, y: 0.000000013549829}
+  m_Size: {x: 115.79742, y: 135.49997}
   m_Direction: 0
 --- !u!199 &1101911320
 ParticleSystemRenderer:
@@ -8423,8 +8442,8 @@ ParticleSystem:
         m_NumAlphaKeys: 2
     startSize:
       serializedVersion: 2
-      minMaxState: 3
-      scalar: 25
+      minMaxState: 0
+      scalar: 150
       minScalar: 15.000001
       maxCurve:
         serializedVersion: 2
@@ -8458,7 +8477,7 @@ ParticleSystem:
         m_RotationOrder: 4
     startSizeY:
       serializedVersion: 2
-      minMaxState: 3
+      minMaxState: 0
       scalar: 1
       minScalar: 1
       maxCurve:
@@ -8511,7 +8530,7 @@ ParticleSystem:
         m_RotationOrder: 4
     startSizeZ:
       serializedVersion: 2
-      minMaxState: 3
+      minMaxState: 0
       scalar: 1
       minScalar: 1
       maxCurve:
@@ -12873,8 +12892,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1117623712}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -98.553, y: 9.894, z: 2.9766169}
-  m_LocalScale: {x: 1.4162599, y: 1.4356248, z: 1}
+  m_LocalPosition: {x: -98.439, y: 9.894, z: 2.9766169}
+  m_LocalScale: {x: 1.7765437, y: 1.8023754, z: 1}
   m_Children: []
   m_Father: {fileID: 405012007}
   m_RootOrder: 0
