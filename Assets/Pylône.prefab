@@ -326,7 +326,7 @@ GameObject:
   - component: {fileID: 212424501673489572}
   - component: {fileID: 61798216868897256}
   m_Layer: 0
-  m_Name: "Pylo\u0302ne"
+  m_Name: "Pyl\xF4ne"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

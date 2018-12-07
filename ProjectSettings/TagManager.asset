@@ -5,6 +5,9 @@ TagManager:
   serializedVersion: 2
   tags:
   - Fire
+  - LevelClear
+  - ChatGrin
+  - EndTrigger
   layers:
   - Default
   - TransparentFX

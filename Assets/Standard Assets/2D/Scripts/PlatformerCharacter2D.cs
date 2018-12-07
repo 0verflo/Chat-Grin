@@ -27,7 +27,7 @@ namespace UnityStandardAssets._2D {
             m_Anim = GetComponent<Animator> ();
             m_Rigidbody2D = GetComponent<Rigidbody2D> ();
             m_SpriteRenderer = GetComponent<SpriteRenderer> ();
-            allSounds = GetComponents<AudioSource>();
+            allSounds = GetComponents<AudioSource> ();
         }
 
         private void FixedUpdate () {
@@ -85,16 +85,18 @@ namespace UnityStandardAssets._2D {
             // If the player should jump...
             if (m_Grounded && jump && m_Anim.GetBool ("Ground")) {
                 // Play sound on Jump
-                allSounds[0].Play();
+                allSounds[0].Play ();
 
                 // Add a vertical force to the player.
                 m_Grounded = false;
                 m_Anim.SetBool ("Ground", false);
+
+                // Everytime the player moves, lock its velocity on the y axis
                 if (m_Rigidbody2D.velocity.y > 3) {
-                    //m_Rigidbody2D.mass = 6f;
-                    m_Rigidbody2D.velocity = new Vector2(m_Rigidbody2D.velocity.x, 2f);
-                    Debug.Log(m_Rigidbody2D.velocity.y);
+                    Debug.Log (m_Rigidbody2D.velocity.y);
+                    m_Rigidbody2D.velocity = new Vector2 (m_Rigidbody2D.velocity.x, 2f);
                 }
+                GameObject player = this.gameObject;
                 m_Rigidbody2D.AddForce (new Vector2 (0f, m_JumpForce));
             }
         }
@@ -105,12 +107,18 @@ namespace UnityStandardAssets._2D {
             m_SpriteRenderer.flipX = !m_FacingRight;
         }
 
-        private void playSoundJunpDown() {
-            AudioSource.PlayClipAtPoint(allSounds[1].clip, transform.position, 0.75f);
+        private void playSoundJunpDown () {
+            AudioSource.PlayClipAtPoint (allSounds[1].clip, transform.position, 0.75f);
         }
 
-        private void playSoundStep() {
-            AudioSource.PlayClipAtPoint(allSounds[0].clip, transform.position, 0.95f);
+        private void playSoundStep () {
+            AudioSource.PlayClipAtPoint (allSounds[0].clip, transform.position, 0.95f);
+        }
+
+        private void OnTriggerEnter2D (Collider2D other) {
+            if (other.tag == "ChatGrin") {
+                this.gameObject.tag = "LevelClear";
+            }
         }
 
     }
